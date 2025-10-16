@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - CARE Hospitals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="top-bar">...</div>
+    <header class="main-header">...</header>
+
+    <main class="container page-content">
+        <section class="section feedback-section">
+            <h2 class="section-title">Share Your Experience ⭐</h2>
+            <p class="subtitle">Your feedback is vital to us! Please tell us about your recent visit so we can
+                continually improve our care and services.</p>
+
+            <div class="feedback-form-card">
+                <h3>Tell Us About Your Visit</h3>
+                <form>
+                    <input type="text" placeholder="Your Full Name (Optional)">
+                    <input type="email" placeholder="Email Address (Optional)">
+                    <select required>
+                        <option value="">Hospital Visited</option>
+                        <option value="hyd">Hyderabad</option>
+                        <option value="rpr">Raipur</option>
+                        <option value="bhu">Bhubaneswar</option>
+                    </select>
+
+                    <label for="rating">Overall Satisfaction Rating (1 = Poor, 5 = Excellent):</label>
+                    <input type="range" id="rating" name="rating" min="1" max="5" value="3"
+                        oninput="this.nextElementSibling.value=this.value">
+                    <output>3</output>
+
+                    <textarea
+                        placeholder="Please describe your experience in detail (doctors, nurses, facilities, etc.)"
+                        rows="8" required></textarea>
+
+                    <button type="submit" class="btn-appointment"><i class="fas fa-bullhorn"></i> Submit
+                        Feedback</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">...</footer>
+</body>
+
+</html>

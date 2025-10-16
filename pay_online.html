@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Online - CARE Hospitals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="top-bar">...</div>
+    <header class="main-header">...</header>
+
+    <main class="container page-content">
+        <section class="section payment-section">
+            <h2 class="section-title">Secure Online Payment 💳</h2>
+            <p class="subtitle">Use this secure portal to pay hospital bills, doctor fees, or make advance payments for
+                procedures.</p>
+
+            <div class="payment-form-card">
+                <h3>Enter Payment Details</h3>
+                <form>
+                    <select required>
+                        <option value="">Select Payment Type</option>
+                        <option value="bill">Hospital Bill Payment</option>
+                        <option value="advance">Advance Payment/Deposit</option>
+                        <option value="doctor">Doctor Consultation Fee</option>
+                    </select>
+                    <input type="text" placeholder="Patient ID / Bill Number" required>
+                    <input type="number" placeholder="Amount (₹)" required>
+                    <input type="text" placeholder="Patient Name" required>
+                    <input type="email" placeholder="Email for Receipt" required>
+
+                    <button type="submit" class="btn-appointment" style="background-color: #007bff;"><i
+                            class="fas fa-lock"></i> Proceed to Secure Gateway</button>
+                </form>
+                <p class="security-note"><i class="fas fa-shield-alt"></i> Payments are processed by a PCI-compliant,
+                    secure gateway.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">...</footer>
+</body>
+
+</html>
