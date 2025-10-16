@@ -1,0 +1,734 @@
+/* Basic Reset and Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-blue: #004d9c; /* CARE Hospitals primary blue */
+    --secondary-blue: #0066cc; /* Darker blue for hover/accent */
+    --accent-green: #4CAF50; /* A friendly green for appointments/success */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --background-light: #ffffff;
+    --background-gray: #f9f9f9;
+    --border-color: #ddd;
+    --container-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+}
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-blue);
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Top Bar Styling --- */
+.top-bar {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    font-size: 0.85rem;
+    padding: 10px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.top-links {
+    display: flex;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.top-links a {
+    color: var(--text-light);
+    white-space: nowrap; /* Keep links from breaking oddly */
+}
+
+.top-links a:hover {
+    color: var(--accent-green);
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0;
+}
+
+.contact-info span {
+    white-space: nowrap;
+}
+
+.contact-info select {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    cursor: pointer;
+}
+.contact-info select option {
+    color: var(--text-dark); /* Ensure options are readable */
+}
+
+.icon-link {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* --- Main Header & Navigation --- */
+.main-header {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+}
+
+.logo p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    line-height: 1;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.main-nav a:hover {
+    color: var(--primary-blue);
+}
+
+/* Appointment Button */
+.btn-appointment {
+    background-color: var(--accent-green);
+    color: var(--text-light) !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 700 !important;
+}
+
+.btn-appointment:hover {
+    background-color: #388e3c; /* Darker shade of green */
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-bg-placeholder.jpg') no-repeat center center/cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    text-align: left;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.callout .tagline {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #fdd835; /* Gold accent */
+    margin-bottom: 10px;
+}
+
+.callout h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.callout h1 strong {
+    color: var(--accent-green);
+}
+
+.text-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.btn-watch-video {
+    background-color: transparent;
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.btn-watch-video:hover {
+    background-color: var(--text-light);
+    color: var(--primary-blue);
+}
+
+/* --- Search Bar Section --- */
+.search-bar-section {
+    padding: 20px 0;
+    background-color: var(--background-gray);
+    position: relative;
+    z-index: 10;
+    margin-top: -30px; /* Pull it up into the banner area */
+}
+
+.doctor-search-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-light);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+}
+
+.doctor-search-box i {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.doctor-search-box input[type="text"],
+.doctor-search-box select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.btn-search {
+    background-color: var(--secondary-blue);
+    color: var(--text-light);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-search:hover {
+    background-color: var(--primary-blue);
+}
+
+/* --- General Section Styling --- */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.subtitle {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #666;
+}
+
+/* --- Centre of Excellence --- */
+.centre-of-excellence {
+    background-color: var(--background-light);
+}
+
+.excellence-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.image-box {
+    background: url('centre-of-excellence-placeholder.jpg') no-repeat center center/cover;
+    height: 400px;
+    border-radius: 8px;
+}
+
+.specialities-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 20px;
+}
+
+.specialities-list li a {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.specialities-list li a:hover {
+    color: var(--accent-green);
+}
+
+.view-all {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.view-all:hover {
+    background-color: var(--secondary-blue);
+}
+
+
+/* --- Our Locations --- */
+.our-locations {
+    background-color: var(--background-gray);
+}
+
+.location-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    background-color: var(--background-light);
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.location-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.loc-img-card {
+    height: 200px;
+    background: var(--border-color); /* Placeholder background */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Awards and Accreditations --- */
+.awards-accreditations {
+    padding-bottom: 30px;
+}
+
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.award-card {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.award-card::before {
+    content: '[Award Icon/Image Placeholder]';
+    display: block;
+    font-size: 1rem;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto 15px;
+    color: #fdd835; /* Gold-like color */
+    font-weight: 700;
+}
+
+.award-card p {
+    font-size: 1rem;
+}
+
+/* --- Latest Blogs --- */
+.latest-blogs {
+    background-color: var(--background-light);
+    padding-top: 30px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.main-blog-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.main-blog-card 
+
+[Image of baby feet]
+ {
+    display: block;
+    height: 250px;
+    background: url('baby-feet-placeholder.jpg') no-repeat center center/cover;
+}
+
+.main-blog-card h3 {
+    padding: 15px 20px 10px;
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+}
+
+.main-blog-card p {
+    padding: 0 20px 15px;
+}
+
+.main-blog-card a {
+    display: block;
+    padding: 0 20px 20px;
+    font-weight: 500;
+}
+
+.side-blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-blog-item {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.blog-thumbnail, .side-blog-item 
+
+[Image of legs with varicose veins]
+ {
+    width: 100px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: var(--border-color); /* Placeholder */
+}
+
+.side-blog-item 
+
+[Image of legs with varicose veins]
+ {
+    background: url('varicose-veins-placeholder.jpg') no-repeat center center/cover;
+}
+
+.side-blog-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.side-blog-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- FAQ Section --- */
+.faq-section {
+    background-color: var(--background-gray);
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--background-light);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-blue);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.faq-answer p {
+    padding-bottom: 15px;
+}
+
+/* Note: You would need JavaScript to toggle the max-height and rotate the icon */
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+/* --- Sticky Sidebar --- */
+.sticky-sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    z-index: 100;
+}
+
+.sidebar-item {
+    display: block;
+    padding: 10px 15px;
+    color: var(--text-light);
+    text-align: center;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.sidebar-item i {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.health-packages { background-color: #f57f17; } /* Orange */
+.phone-number { background-color: var(--primary-blue); }
+.book-appointment { background-color: var(--accent-green); }
+.second-opinion { background-color: #d84315; } /* Darker Orange/Red */
+.whatsapp { background-color: #25D366; } /* WhatsApp Green */
+
+.sidebar-item:hover {
+    filter: brightness(1.2);
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: #333;
+    color: var(--text-light);
+    padding: 40px 0 20px;
+    font-size: 0.95rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-column h4 {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    padding: 5px 0;
+}
+
+.footer-column a:hover {
+    color: var(--accent-green);
+}
+
+.registered-office p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Responsiveness for Smaller Screens --- */
+@media (max-width: 1024px) {
+    .main-nav ul {
+        gap: 10px;
+    }
+    .main-nav a {
+        font-size: 0.9rem;
+    }
+    .main-nav .btn-appointment {
+        padding: 8px 15px;
+    }
+
+    .excellence-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-box {
+        order: -1; /* Move image above list on smaller screens */
+    }
+
+    .specialities-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-links, .contact-info {
+        justify-content: center;
+        width: 100%;
+        padding: 5px 0;
+        flex-wrap: wrap;
+    }
+    
+    .main-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav a {
+        padding: 5px 10px;
+    }
+    
+    .hero-banner {
+        height: 400px;
+    }
+    
+    .callout h1 {
+        font-size: 2.5rem;
+    }
+
+    .doctor-search-box {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .doctor-search-box input,
+    .doctor-search-box select,
+    .btn-search {
+        width: 100%;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 350px;
+    }
+
+    .callout h1 {
+        font-size: 1.8rem;
+    }
+    
+    .specialities-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-column h4 {
+        margin-top: 15px;
+    }
+}
